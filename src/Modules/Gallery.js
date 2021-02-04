@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import  './Gallery.css';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -29,20 +28,12 @@ function Gallery() {
       return <div>Loading...</div>;
     } else {
       return (<div>
-        <Router>
         {items.map((item) => (
-            //<img src = {item.urls.small}/>
              <a href={item.urls.small}>
                 <img src={item.urls.small}/>
-             </a>  
-            
-            // <Link to={item.urls.small}>
-            //    <img src={item.urls.small}/>
-            // </Link>
-
+             </a>             
         ))}
-        </Router>
-        </div>);
+    </div>);
     }
   }
   
